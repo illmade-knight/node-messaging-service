@@ -2,10 +2,11 @@
   "name": "action-intention",
   "version": "1.0.0",
   "description": "node backend for action-intention",
-  "main": "src/main.ts",
+  "main": "dist/main.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
     "start": "node dist/main.js",
     "dev": "nodemon"
   },
@@ -29,6 +30,7 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "jsonwebtoken": "^9.0.2",
+    "jose": "^6.1.0",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0"
   },
@@ -42,6 +44,7 @@
     "@types/passport-google-oauth20": "^2.0.16",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "tsx": "^4.16.2",
     "typescript": "^5.9.2"
   }
 }

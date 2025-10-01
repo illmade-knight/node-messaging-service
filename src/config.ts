@@ -18,21 +18,17 @@ const config = {
     /** The Google Cloud Project ID for Firestore. */
     gcpProjectId: process.env.GCP_PROJECT_ID,
 
-    /**
-     * The secret key used to VALIDATE incoming internal JWTs.
-     * This MUST be the exact same secret used by the node-identity-service to SIGN the tokens.
-     */
-    jwtSecret: process.env.JWT_SECRET,
-
     identityServiceUrl: process.env.IDENTITY_SERVICE_URL,
+
+    internalApiKey: process.env.INTERNAL_API_KEY,
 };
 
 // --- Runtime Validation ---
 // This ensures the server fails fast if critical secrets are not configured.
 const requiredSecrets: (keyof typeof config)[] = [
     'gcpProjectId',
-    'jwtSecret',
-    'identityServiceUrl' // Add the new required variable
+    'identityServiceUrl',
+    'internalApiKey',
 ];
 
 for (const secret of requiredSecrets) {

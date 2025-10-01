@@ -1,34 +1,17 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // Environment Settings
     "module": "nodenext",
     "target": "esnext",
-    "types": ["node"], // Added back for Node.js environment globals like 'process'
-
-    // Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "strict": true,
-
-    // Module Settings
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-
-    // Project Layout
-    "rootDir": "./src",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
     "outDir": "./dist",
-    "esModuleInterop": true
+    "rootDir": "./src",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
-
